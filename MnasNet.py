@@ -67,12 +67,12 @@ class MnasNet(nn.Module):
         # setting of inverted residual blocks
         self.interverted_residual_setting = [
             # t, c, n, s, k
-            [3, 24,  3, 1, 3],  # -> 56x56
+            [3, 24,  3, 2, 3],  # -> 56x56
             [3, 40,  3, 2, 5],  # -> 28x28
             [6, 80,  3, 2, 5],  # -> 14x14
-            [6, 96,  2, 2, 3],  # -> 14x14
-            [6, 192, 4, 1, 5],  # -> 7x7
-            [6, 320, 1, 2, 3],  # -> 7x7   
+            [6, 96,  2, 1, 3],  # -> 14x14
+            [6, 192, 4, 2, 5],  # -> 7x7
+            [6, 320, 1, 1, 3],  # -> 7x7
         ]
 
         assert input_size % 32 == 0
